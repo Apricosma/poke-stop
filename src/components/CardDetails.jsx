@@ -58,7 +58,7 @@ const CardDetails = () => {
           {cardData.level ? <p>Level: {cardData.level}</p> : <p>Level: N/a</p>}
 
           <p>Types: {cardData.types.join(", ")}</p>
-          <p>Rarity: {cardData.rarity ? cardData.rarity : 'N/a'}</p>
+          <p>Rarity: {cardData.rarity ? cardData.rarity : "N/a"}</p>
 
           <p>
             Evolves From: {cardData.evolvesFrom ? cardData.evolvesFrom : "None"}

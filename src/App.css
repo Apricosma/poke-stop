@@ -5,10 +5,10 @@
 
 /* colors */
 :root {
-  --primary-color: #BB86FC;
+  --primary-color: #bb86fc;
   --background-color: #121212;
-  --background-color-light: #1F1F1F;
-  --primary-hover: #3A2D49;
+  --background-color-light: #1f1f1f;
+  --primary-hover: #3a2d49;
 }
 
 .container {
@@ -32,7 +32,7 @@
 
 /* cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   background-color: var(--background-color-light);
   border-radius: 10px;
@@ -41,7 +41,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
   background-color: var(--primary-hover);
 }
@@ -65,7 +65,7 @@
   margin-bottom: 10px;
 }
 
-.card-image{
+.card-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -125,7 +125,7 @@
 }
 
 .details-container .attack-container {
-  border-bottom: #3A2D49 1px solid;
+  border-bottom: #3a2d49 1px solid;
   padding-bottom: 10px;
 }
 
@@ -149,4 +149,3 @@
 .drawer-wrapper {
   width: 100%;
 }
-
