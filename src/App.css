@@ -71,3 +71,77 @@
   object-fit: contain;
 }
 
+/* card details page */
+.card-details {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-image-details {
+  width: 300px;
+  height: auto;
+  margin-right: 1rem;
+  align-self: flex-start;
+}
+
+.card-name-details {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.details-container p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.details-container h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.details-container h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-container div {
+  margin-bottom: 1rem;
+}
+
+.details-container div p {
+  display: flex;
+  align-items: flex-start;
+}
+
+.drawer {
+  background-color: var(--background-color-light);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  padding-left: 10px; /* Add padding for better visual appearance */
+  text-align: left;
+  border-radius: 15px;
+  color: var(--primary-color);
+}
+
+.drawer:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+}
+
+.drawer-wrapper {
+  width: 100%;
+}
+
