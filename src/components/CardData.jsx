@@ -23,7 +23,7 @@ const CardData = ({ pageSize, page }) => {
 			{cardData.map(card => (
 				<div key={card.id} className='card'>
 					<h1 className='card-name'>{card.name}</h1>
-					<img src={card.images.small} alt={card.name} />
+					<img src={card.images.small} alt={card.name} className='card-image'/>
 				</div>
 			))}
 		</div>
