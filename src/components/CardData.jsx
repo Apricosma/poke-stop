@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import pokemon from 'pokemontcgsdk';
+import PropTypes from 'prop-types';
 
 pokemon.configure({ apiKey: import.meta.env.VITE_POKEMON_API_KEY });
 
@@ -22,12 +23,20 @@ const CardData = ({ pageSize, page }) => {
 		<div className='card-grid'>
 			{cardData.map(card => (
 				<div key={card.id} className='card'>
-					<h1 className='card-name'>{card.name}</h1>
-					<img src={card.images.small} alt={card.name} className='card-image'/>
+					<img src={card.images.small} alt={card.name} className='card-image' />
+					<div className='card-container'>
+						<h3 className='card-name'>{card.name}</h3>
+						<p>${card.cardmarket.prices.averageSellPrice}</p>
+					</div>
 				</div>
 			))}
 		</div>
 	);
 };
+
+CardData.propTypes = {
+	pageSize: PropTypes.number,
+	page: PropTypes.number,
+}
 
 export default CardData;
