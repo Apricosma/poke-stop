@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import CardData from "./components/CardData";
 import CardDetails from "./components/CardDetails";
@@ -30,6 +25,7 @@ function App() {
     setCurrentPage(pageNumber);
   }, [location.state?.pageNumber]);
 
+  // Having issues with rendering the correct page when the user manually enters a page number in the URL
   // Update the currentPage state when the page parameter changes
   useEffect(() => {
     const currentPageFromUrl = location.pathname.substring(1);
@@ -62,11 +58,11 @@ function App() {
       <Routes>
         <Route
           path="/:page"
-          element={<CardData pageSize={10} page={currentPage} />}
+          element={<CardData pageSize={20} page={currentPage} />}
         />
         <Route
           path="/"
-          element={<CardData pageSize={10} page={currentPage} />}
+          element={<CardData pageSize={20} page={currentPage} />}
         />
         <Route path="/card/:id" element={<CardDetails />} />
         <Route path="/404" element={<NotFound />} />
