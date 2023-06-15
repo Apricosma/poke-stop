@@ -3,7 +3,6 @@ import {
   Routes,
   Route,
   useNavigate,
-  useParams,
   useLocation,
 } from "react-router-dom";
 import "./App.css";
@@ -31,7 +30,6 @@ function App() {
     setCurrentPage(pageNumber);
   }, [location.state?.pageNumber]);
 
-  // Having issues when the user manually changes url
   // Update the currentPage state when the page parameter changes
   useEffect(() => {
     const currentPageFromUrl = location.pathname.substring(1);
@@ -41,7 +39,7 @@ function App() {
     }
     setCurrentPage(pageNumber);
     sessionStorage.setItem("currentPage", currentPage);
-  }, [location.pathname, location.state?.pageNumber]);
+  }, [location.pathname, location.state?.pageNumber, currentPage]);
 
   return (
     <>
