@@ -31,6 +31,7 @@ function App() {
     setCurrentPage(pageNumber);
   }, [location.state?.pageNumber]);
 
+  // Having issues when the user manually changes url
   // Update the currentPage state when the page parameter changes
   useEffect(() => {
     const currentPageFromUrl = location.pathname.substring(1);
