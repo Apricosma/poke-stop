@@ -106,7 +106,7 @@ const CardDetails = () => {
               </h4>
               <Collapse isOpened={isAttacksOpen}>
                 {cardData.attacks.map((attack, index) => (
-                  <div key={index}>
+                  <div key={index} className="attack-container">
                     <p>Name: {attack.name}</p>
                     <p>Cost: {attack.cost.join(", ")}</p>
                     <p>Converted Energy Cost: {attack.convertedEnergyCost}</p>

@@ -124,6 +124,11 @@
   align-items: flex-start;
 }
 
+.details-container .attack-container {
+  border-bottom: #3A2D49 1px solid;
+  padding-bottom: 10px;
+}
+
 .drawer {
   background-color: var(--background-color-light);
   width: 100%;
