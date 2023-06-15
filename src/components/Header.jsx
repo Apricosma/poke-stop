@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ title, color, navigation }) => {
+	const navigate = useNavigate();
+
+	const handleTitleClick = () => {
+		navigate('/');
+	};
+
 	return (
 		<header className='app-header' style={{ backgroundColor: color }}>
 			<div className='container header-content' style={{display: 'flex'}}>
-				<h3>{title}</h3>
+				<h3 onClick={handleTitleClick}>{title}</h3>
 				<nav>
 					<ul style={{ listStyleType: 'none', display: 'flex', gap: '10px' }}>
 						{navigation.map((item, index) => (
