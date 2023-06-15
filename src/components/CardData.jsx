@@ -34,7 +34,7 @@ const CardData = ({ pageSize, page }) => {
 						<img src={card.images.small} alt={card.name} className='card-image' />
 						<div className='card-container'>
 							<h3 className='card-name'>{card.name}</h3>
-							<p>${card.cardmarket.prices.averageSellPrice}</p>
+							<p>${card.cardmarket?.prices?.averageSellPrice}</p>
 						</div>
 					</div>
 				))}
