@@ -18,16 +18,16 @@ const CardDetails = () => {
   const [isSetOpen, setIsSetOpen] = useState(false);
 
   useEffect(() => {
-    pokemon.card
-      .find(id)
-      .then((card) => {
+    const fetchCardData = async () => {
+      try {
+        const card = await pokemon.card.find(id);
         setCardData(card);
-        console.log(card);
-      })
-      .catch((err) => {
-        setError(err);
-        console.log(err);
-      });
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchCardData();
   }, [id]);
 
   if (error) {

@@ -16,11 +16,17 @@ const CardData = ({ pageSize, page }) => {
 
   // get card data
   useEffect(() => {
-    pokemon.card.where({ pageSize, page }).then((result) => {
-      setCardData(result.data);
-      console.log(result);
-    });
-  }, [pageSize, page]);
+    const fetchCardData = async () => {
+      try {
+        const result = await pokemon.card.where({ pageSize, page });
+        setCardData(result.data);
+      } catch (error) {
+        navigate("/404");
+      }
+    };
+
+    fetchCardData();
+  }, [pageSize, page, navigate]);
 
   // set current page
   useEffect(() => {
