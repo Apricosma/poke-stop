@@ -17,7 +17,7 @@ function CardDataPage({ pageSize }) {
       <Helmet>
         <title>PokeStop | Home</title>
       </Helmet>
-      <CardData pageSize={pageSize} page={currentPage} />;
+      <CardData pageSize={pageSize} page={currentPage} />
     </>
   );
 }
