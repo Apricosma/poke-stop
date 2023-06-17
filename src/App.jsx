@@ -5,6 +5,7 @@ import CardDataPage from "./pages/CardDataPage";
 import CardDetails from "./components/CardDetails";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
+import SearchResultsPage from "./pages/SearchResultsPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<CardDataPage pageSize={20} />} />
         <Route path="/card/:id" element={<CardDetails />} />
         <Route path="/404" element={<NotFound />} />
+        <Route path="/search" element={<SearchResultsPage />} />
       </Routes>
 
       <Footer />

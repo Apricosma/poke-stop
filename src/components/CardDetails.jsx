@@ -200,7 +200,7 @@ const CardDetails = () => {
 };
 
 CardDetails.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default CardDetails;

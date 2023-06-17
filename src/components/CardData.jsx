@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { useNavigate, useLocation } from "react-router-dom";
 import Pagination from "./Pagination";
 import SortButton from "./SortButton";
+import CardCard from "./CardCard";
+import SearchComponent from "./Search";
 
 pokemon.configure({ apiKey: import.meta.env.VITE_POKEMON_API_KEY });
 
@@ -12,7 +14,7 @@ const CardData = ({ pageSize, page }) => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const location = useLocation();
-	const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(null);
 
   // get card data
   useEffect(() => {
@@ -78,30 +80,32 @@ const CardData = ({ pageSize, page }) => {
   return (
     <>
       <div className="pagination container button-list">
-        <SortButton sortType="name" onSort={handleSort} activeButton={activeButton} 
-          setActiveButton={setActiveButton} />
-        <SortButton sortType="price" onSort={handleSort} activeButton={activeButton} 
-          setActiveButton={setActiveButton} />
-        <Pagination currentPage={currentPage} onPageChange={handlePageChange} />
+        <div className="search-wrapper">
+          <SearchComponent />
+        </div>
+        <div className="button-wrapper">
+          <SortButton
+            sortType="name"
+            onSort={handleSort}
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+          />
+          <SortButton
+            sortType="price"
+            onSort={handleSort}
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+          />
+          <Pagination
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
+          />
+        </div>
       </div>
       <div className="container index-wrapper">
         <div className="card-grid">
           {cardData.map((card) => (
-            <div
-              key={card.id}
-              className="card"
-              onClick={() => handleCardClick(card.id)}
-            >
-              <img
-                src={card.images.small}
-                alt={card.name}
-                className="card-image"
-              />
-              <div className="card-container">
-                <h3 className="card-name">{card.name}</h3>
-                <p>${card.cardmarket?.prices?.averageSellPrice}</p>
-              </div>
-            </div>
+            <CardCard key={card.id} card={card} onCardClick={handleCardClick} />
           ))}
         </div>
       </div>
