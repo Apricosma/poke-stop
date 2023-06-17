@@ -11,6 +11,10 @@
   --primary-hover: #3a2d49;
 }
 
+.details-wrapper, .index-wrapper {
+  min-height: calc(100vh - 145px);
+}
+
 .container {
   width: min(100% - 30px, 1280px);
   margin-inline: auto;
@@ -55,6 +59,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  padding: 20px 0 75px;
 }
 
 .card-name {
@@ -148,4 +153,62 @@
 
 .drawer-wrapper {
   width: 100%;
+}
+
+/* footer */
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bar {
+  background-color: #0a0a0a;
+  
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.navList {
+  margin-right: 10px;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  list-style: none;
+}
+
+/* pagination buttons */
+.pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.next-button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 2px;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in;
+}
+
+.next-button:hover {
+  background-color: #925fd1;
+}
+
+.previous-button {
+  background-color: var(--background-color);
+  border: var(--primary-color) 1px solid;
+  color: grey;
 }

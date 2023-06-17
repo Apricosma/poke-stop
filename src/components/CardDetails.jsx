@@ -40,7 +40,7 @@ const CardDetails = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container details-wrapper">
       <div className="card-details">
         <img
           src={cardData.images.small}

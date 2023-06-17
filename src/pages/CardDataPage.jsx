@@ -17,6 +17,6 @@ function CardDataPage({ pageSize }) {
 // prop validation
 CardDataPage.propTypes = {
   pageSize: PropTypes.number.isRequired,
-}
+};
 
 export default CardDataPage;

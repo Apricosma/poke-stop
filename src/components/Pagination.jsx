@@ -11,10 +11,20 @@ function Pagination({ currentPage, onPageChange }) {
 
   return (
     <>
-      <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+      <button
+        className="previous-button"
+        onClick={() => handlePageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+      >
         Previous
       </button>
-      <button onClick={() => handlePageChange(currentPage + 1)}>Next</button>
+
+      <button
+        className="next-button"
+        onClick={() => handlePageChange(currentPage + 1)}
+      >
+        Next
+      </button>
     </>
   );
 }
@@ -22,6 +32,6 @@ function Pagination({ currentPage, onPageChange }) {
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   onPageChange: PropTypes.func.isRequired,
-}
+};
 
 export default Pagination;

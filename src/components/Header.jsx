@@ -5,7 +5,9 @@ const Header = ({ title, color, navigation }) => {
   const navigate = useNavigate();
 
   const handleTitleClick = () => {
-    navigate("/");
+    // this looks strange in the url but it was the only way I could fix
+    // an issue with refreshing
+    navigate("/poke-stop/");
   };
 
   return (
