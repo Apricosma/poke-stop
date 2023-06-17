@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CardData from "../components/CardData";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
 function CardDataPage({ pageSize }) {
   const location = useLocation();
@@ -11,7 +12,14 @@ function CardDataPage({ pageSize }) {
     sessionStorage.setItem("currentPage", currentPage);
   }, [currentPage]);
 
-  return <CardData pageSize={pageSize} page={currentPage} />;
+  return (
+    <>
+      <Helmet>
+        <title>PokeStop | Home</title>
+      </Helmet>
+      <CardData pageSize={pageSize} page={currentPage} />;
+    </>
+  );
 }
 
 // prop validation
