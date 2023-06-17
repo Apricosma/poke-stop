@@ -11,6 +11,8 @@
   --primary-hover: #3a2d49;
 }
 
+
+
 .details-wrapper, .index-wrapper {
   min-height: calc(100vh - 145px);
 }
@@ -207,8 +209,13 @@
   background-color: #925fd1;
 }
 
-.previous-button {
+.previous-button, .sort-button {
   background-color: var(--background-color);
   border: var(--primary-color) 1px solid;
-  color: grey;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.previous-button:hover, .sort-button:hover {
+  background-color: var(--primary-hover);
 }
