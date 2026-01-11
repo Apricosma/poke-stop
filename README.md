@@ -1,4 +1,6 @@
-# PokeStop
+# PokeStop (DEPRECATED)
+### Free PokemonTCG API no longer exists
+
 A simple React front-end pokemon card app bootstrapped with Vite utilizing https://pokemontcg.io/ api for the data
 
 Created for college React project to demonstrate React skills including components, props, react-router, best practice organizaiton, pagination, data-sorting, and simple dynamic styling.
